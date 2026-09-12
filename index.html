@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="RUSTIC Khulna — A non-stop fight against poverty and climate change. Building resilient communities through environmental protection, education, and sustainable development in Bangladesh." />
+    <title>RUSTIC — Fighting Poverty & Climate Change</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo-header.png">
+    <link rel="stylesheet" href="/src/styles.css" />
+    <meta property="og:image" content="images/logo-header.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="images/logo-header.png">
+</head>
+  <body>
+    <!-- Scroll Progress -->
+    <div class="scroll-progress">
+      <div class="scroll-progress-bar">
+        <div class="scroll-progress-fill" id="scrollFill"></div>
+        <div class="scroll-progress-dot" id="scrollDot"></div>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+      <div class="navbar-inner">
+        <div class="navbar-brand" onclick="scrollToId('#home')">
+          <img
+  class="rustic-logo no-anim"
+  src="images/logo-header.png"
+  alt="RUSTIC Logo"
+  id="navLogo"
+  style="
+    width:40px;
+    height:40px;
+    object-fit:contain;
+    display:block;
+  "
+>
+          <span class="navbar-brand-text">RUSTIC</span>
+        </div>
+        <div class="navbar-links" id="navLinks">
+          <a class="navbar-link active" data-section="home" onclick="scrollToId('#home')">Home</a>
+          <a class="navbar-link" data-section="story" onclick="scrollToId('#story')">About</a>
+          <a class="navbar-link" data-section="pillars" onclick="scrollToId('#pillars')">Our Work</a>
+          <a class="navbar-link" data-section="impact" onclick="scrollToId('#impact')">Impact</a>
+          <a class="navbar-link" data-section="environment" onclick="scrollToId('#environment')">Environment</a>
+          <a class="navbar-link" data-section="programs" onclick="scrollToId('#community')">Programs</a>
+          <a class="navbar-link" data-section="gallery" onclick="scrollToId('#gallery')">Gallery</a>
+          <a class="navbar-link" data-section="contact" onclick="scrollToId('#contact')">Contact</a>
+        </div>
+        <div class="navbar-actions">
+          <button class="navbar-cta" onclick="scrollToId('#cta')">Get Involved</button>
+          <button class="navbar-burger" id="burger" aria-label="Open menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-header">
+        <div class="navbar-brand">
+          <div class="rustic-logo no-anim" style="width:36px;height:36px;" id="mobileLogo"></div>
+          <span class="navbar-brand-text">RUSTIC</span>
+        </div>
+        <button onclick="closeMobileMenu()" aria-label="Close menu" style="padding:0.5rem;color:var(--cream);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="mobile-menu-links" id="mobileLinks"></div>
+    </div>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="home">
+        <div class="hero-bg">
+          <div class="hero-bg-blob b1"></div>
+          <div class="hero-bg-blob b2"></div>
+          <div class="hero-bg-blob b3"></div>
+        </div>
+        <div class="hero-particles" id="heroParticles"></div>
+        <div class="hero-content">
+          <div class="hero-text">
+            <div class="hero-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#3DBC7E" stroke-width="2"><path d="M12 3l1.9 5.8a2 2 0 0 0 1.3 1.3L21 12l-5.8 1.9a2 2 0 0 0-1.3 1.3L12 21l-1.9-5.8a2 2 0 0 0-1.3-1.3L3 12l5.8-1.9a2 2 0 0 0 1.3-1.3L12 3z"/></svg>
+              Khulna, Bangladesh - Since 1988
+            </div>
+            <h1 class="hero-title">
+              <span class="hero-title-rustic">RUSTIC</span>
+              <span class="hero-title-words" id="heroWords"></span>
+            </h1>
+            <p class="hero-desc">
+              RUSTIC works to reduce poverty, support communities affected by climate change, expand access to education, empower women and youth, and create sustainable opportunities. Through community-based initiatives, the organization helps vulnerable people improve their livelihoods, access essential services, develop skills, and build a safer, stronger, and more sustainable future.
+            </p>
+            <div class="hero-buttons">
+              <a class="btn btn-primary" onclick="scrollToId('#impact')">
+                Explore Our Impact
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <a class="btn btn-secondary" onclick="scrollToId('#cta')">
+                Get Involved
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="hero-logo-wrap">
+            <div class="hero-ring-outer">
+              <svg viewBox="0 0 400 400" style="width:100%;height:100%;">
+                <circle cx="200" cy="200" r="195" fill="none" stroke="#16A765" stroke-width="1" stroke-dasharray="4 8" opacity="0.3"/>
+                <circle cx="200" cy="0" r="3" fill="#55C7DD" opacity="0.6"/>
+                <circle cx="400" cy="200" r="3" fill="#55C7DD" opacity="0.6"/>
+                <circle cx="200" cy="400" r="3" fill="#55C7DD" opacity="0.6"/>
+                <circle cx="0" cy="200" r="3" fill="#55C7DD" opacity="0.6"/>
+              </svg>
+            </div>
+            <div class="hero-ring-mid">
+              <svg viewBox="0 0 400 400" style="width:100%;height:100%;">
+                <circle cx="200" cy="200" r="180" fill="none" stroke="#008F9C" stroke-width="1.5" stroke-dasharray="2 12" opacity="0.4"/>
+              </svg>
+            </div>
+            <div class="hero-ring-orbit">
+              <div class="hero-orbit-dot" style="left:50%;top:0;transform:translateX(-50%);width:24px;height:24px;background:rgba(22,167,101,0.6);"></div>
+              <div class="hero-orbit-dot" style="left:50%;bottom:0;transform:translateX(-50%);width:16px;height:16px;background:rgba(0,143,156,0.6);"></div>
+              <div class="hero-orbit-dot" style="left:0;top:50%;transform:translateY(-50%);width:20px;height:20px;background:rgba(21,159,193,0.6);"></div>
+              <div class="hero-orbit-dot" style="right:0;top:50%;transform:translateY(-50%);width:12px;height:12px;background:rgba(61,188,126,0.6);"></div>
+            </div>
+            <div class="hero-logo-glow"></div>
+            <div class="hero-logo-center" id="heroLogo"></div>
+            <div class="hero-ring-curve">
+              <svg viewBox="0 0 400 400" style="width:100%;height:100%;">
+                <path d="M 200 20 Q 350 100 380 200 Q 350 300 200 380 Q 50 300 20 200 Q 50 100 200 20" fill="none" stroke="#16A765" stroke-width="1" opacity="0.2" stroke-dasharray="6 6"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="hero-scroll">
+          <span class="hero-scroll-label">SCROLL</span>
+          <div class="hero-scroll-mouse"><div class="hero-scroll-dot"></div></div>
+        </div>
+      </section>
+
+      <!-- IMPACT -->
+      <section class="impact" id="impact">
+        <div class="impact-grid-bg"></div>
+        <div class="impact-bg-blob b1"></div>
+        <div class="impact-bg-blob b2"></div>
+        <div class="impact-orbs" id="impactOrbs"></div>
+        <div class="container">
+          <div class="impact-header reveal reveal-delay-1">
+            <span class="section-label">Our Impact</span>
+            <h2 class="section-title">Measurable change, <span class="text-gradient-forest">lasting results</span></h2>
+            <p class="impact-desc">
+             For decades, RUSTIC has been working alongside vulnerable and marginalized communities across Bangladesh to create meaningful social, economic, and environmental change. Our work focuses on poverty reduction, education, livelihoods, climate resilience, environmental protection, healthcare, and community empowerment.</p>
+          </div>
+          <div class="impact-grid" id="impactGrid"></div>
+        </div>
+      </section>
+
+      <!-- STORY -->
+      <section class="story" id="story">
+        <div class="story-wave-bg"></div>
+        <div class="story-glow-line" id="storyGlowLine"></div>
+        <div class="story-center-line"></div>
+        <div class="container">
+          <div class="story-header reveal reveal-delay-1">
+            <span class="section-label">Our Story</span>
+            <h2 class="section-title" style="font-size:clamp(2rem,5vw,3.75rem);">A Non-Stop Fight Against<br><span class="text-gradient-forest text-shadow-glow">Poverty &amp; Climate Change</span></h2>
+          </div>
+          <div class="story-steps" id="storySteps"></div>
+        </div>
+      </section>
+
+      <!-- PILLARS -->
+      <section class="pillars" id="pillars">
+        <div class="pillars-bg bg-mesh-forest"></div>
+        <div class="pillars-shape s1"></div>
+        <div class="pillars-shape s2"></div>
+        <div class="pillars-shape s3"></div>
+        <div class="container">
+          <div class="pillars-header reveal reveal-delay-1">
+            <span class="section-label">Five Pillars</span>
+            <h2 class="section-title">Five pillars of <span class="text-gradient-forest">sustainable development</span></h2>
+            </div>
+            <p class = "impact-desc">RUSTIC’s work is built around five interconnected pillars: Poverty, Empowerment, Sustainability, Resilience, and Community. It addresses poverty by supporting vulnerable and marginalized people with opportunities to improve their livelihoods and living conditions. Through education, skills development, training, savings, and access to resources, RUSTIC empowers people to become more self-reliant and actively participate in their own development. Its commitment to sustainability promotes environmentally responsible livelihoods, including sustainable agriculture, waste management, organic farming, renewable energy, and natural resource conservation. At the same time, RUSTIC strengthens resilience by helping communities adapt to climate-related challenges such as cyclones, salinity, waterlogging, and environmental changes. At the centre of all these efforts is the community, where grassroots participation, inclusion, dignity, and collective action help create lasting social, economic, and environmental change.</p>
+          
+          <div class="pillars-grid" id="pillarsGrid"></div>
+        </div>
+      </section>
+
+      <!-- WASTE TO RESOURCE -->
+      <section class="waste" id="waste">
+        <div class="waste-circuit"></div>
+        <div class="container">
+          <div class="waste-header reveal reveal-delay-1">
+            <span class="section-label">Signature Program</span>
+            <h2 class="section-title" style="font-size:clamp(2.5rem,6vw,4.5rem);">WASTE <span class="text-gradient-forest text-shadow-glow">INTO</span> RESOURCE</h2>
+            <p>From household bins to fertile soil — RUSTIC transforms daily waste into organic fertilizer, closing the loop between urban sanitation and sustainable agriculture.</p>
+          </div>
+          <div class="waste-process">
+            <div class="waste-line"><div class="waste-line-fill" id="wasteLineFill"></div></div>
+            <div class="waste-steps" id="wasteSteps"></div>
+            <div class="waste-closed-loop" id="wasteClosedLoop">
+              <div class="waste-closed-loop-glow"></div>
+              <div class="waste-closed-loop-ring">
+                <div>
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#3DBC7E" stroke-width="2" style="margin:0 auto;"><path d="M7 20h10M10 20c0-5.5-2-8-2-8M14 20c0-5.5 2-8 2-8M12 12V4M8 8l4-4 4 4"/></svg>
+                  <p class="font-display" style="margin-top:0.5rem;font-size:0.875rem;font-weight:700;color:var(--cream);">Closed Loop</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="wasteParticles"></div>
+      </section>
+
+      <!-- ENVIRONMENT -->
+      <section class="environment" id="environment">
+        <div class="environment-sticky">
+          <div id="envLeaves"></div>
+          <div class="environment-header">
+            <div class="environment-header-inner reveal reveal-delay-1">
+              <span class="section-label">Climate &amp; Environment</span>
+              <h2 class="section-title" style="font-size:clamp(1.75rem,4vw,3rem);">Protecting the Environment.<span class="text-gradient-ocean text-shadow-ocean">Building Resilience.</span></h2>
+            </div>
+          </div>
+          <div class="environment-track" id="envTrack"></div>
+          <div class="environment-hint">
+            <span>SCROLL TO EXPLORE</span>
+            <svg class="environment-hint-arrow" width="20" height="12" viewBox="0 0 20 12" fill="none"><path d="M1 6H18M18 6L13 1M18 6L13 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- FORESTRY -->
+      <section class="forestry" id="forestry">
+        <div id="forestryLeaves"></div>
+        <div class="container">
+          <div class="forestry-header reveal reveal-delay-1">
+            <span class="section-label">Forestry &amp; Afforestation</span>
+            <h2 class="section-title" style="font-size:clamp(2rem,5vw,3.75rem);">Growing a <span class="text-gradient-forest">greener future</span></h2>
+          </div>
+          <div class="forestry-landscape" id="forestryLandscape">
+            <div class="forestry-ground"></div>
+          </div>
+          <div class="forestry-stats" id="forestryStats"></div>
+          <p class="forestry-des">RUSTIC’s forestry and afforestation initiatives focus on increasing tree coverage, supporting environmental protection, and contributing to the restoration of degraded landscapes. In 1998, RUSTIC planted 16,500 tree saplings along 16.5 kilometres of roadside areas across its working areas. Despite the impacts of major cyclones such as Sidr and Aila, approximately 60% of the planted trees survived, demonstrating the lasting contribution of the plantation initiative. The programme forms part of RUSTIC’s broader environmental efforts to promote reforestation, afforestation, and the protection of natural resources. By increasing vegetation and tree coverage, these initiatives contribute to a greener environment and strengthen communities’ connection with and responsibility for their surrounding ecosystems.</p>
+      
+        </div>
+        </section>
+
+      <!-- COMMUNITY -->
+      <section class="community" id="community">
+        <div class="community-dot-bg"></div>
+        <div class="container">
+          <div class="community-header reveal reveal-delay-1">
+            <span class="section-label earth">People &amp; Community</span>
+            <h2 class="section-title dark">Behind every statistic is a <span class="text-gradient-earth">person</span>, a family, a future</h2>
+            <p>From classrooms to clinics, RUSTIC's community programs touch every aspect of daily life — building dignity, opportunity, and lasting self-reliance.</p>
+          </div>
+          <div class="community-grid" id="communityGrid"></div>
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
+      <section class="education" id="education">
+        <div class="education-bg bg-mesh-forest"></div>
+        <div id="educationFloats"></div>
+        <div class="container">
+          <div class="education-grid">
+            <div>
+              <div class="reveal">
+                <span class="section-label">Education</span>
+                <h2 class="section-title">Opening doors through <span class="text-gradient-forest">education</span></h2>
+                <p style="margin-top:1.5rem;color:rgba(247,248,242,0.6);">RUSTIC's education initiatives reach children and adults across Khulna, Bagerhat, and Satkhira — providing schools, learning materials, scholarships, and skills training that break cycles of poverty and create pathways to opportunity.</p>
+              </div>
+              <div class="education-big-number" id="educationBigNumber">250,000+</div>
+              <div style="margin-top:0.5rem;font-size:0.875rem;color:rgba(247,248,242,0.5);">Beneficiaries reached across all programs</div>
+              <div style="margin-top:0.25rem;font-size:0.75rem;color:rgba(247,248,242,0.4);">Reported in organizational profile</div>
+            </div>
+            <div class="education-card reveal reveal-delay-2">
+              <div class="education-card-photo">
+                <img src="https://images.pexels.com/photos/36666949/pexels-photo-36666949.jpeg?auto=compress&cs=tinysrgb&h=400&w=600" alt="Education in Bangladesh" loading="lazy" />
+                <div class="education-card-photo-overlay"></div>
+              </div>
+              <div class="education-list" id="educationList"></div>
+              <div class="education-card-glow"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LOCATIONS -->
+      <section class="locations" id="locations">
+        <div class="locations-bg bg-mesh-ocean"></div>
+        <div class="locations-ripples" id="locationsRipples"></div>
+        <div class="container">
+          <div class="locations-header reveal reveal-delay-1">
+            <span class="section-label teal">Where We Work</span>
+            <h2 class="section-title">Rooted in <span class="text-gradient-ocean">coastal Bangladesh</span></h2>
+          </div>
+          
+          <div class="locations-grid">
+            <div class="locations-map reveal-scale">
+                <g id="locLines"></g>
+                <g id="locPoints"></g>
+                
+              </svg>
+              <image
+  href="images/impact_1.webp"
+  x="150"
+  y="145"
+  width="100"
+  height="30"
+  opacity="0.15"
+  preserveAspectRatio="xMidYMid meet"
+/>
+            </div>
+            <div class="locations-info" id="locationsInfo"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LEADERSHIP -->
+      <section class="leadership" id="leadership">
+        <div class="leadership-ring-bg"></div>
+        <div class="leadership-particles" id="leadershipParticles"></div>
+        <div class="container">
+          <div class="leadership-header reveal reveal-delay-1">
+            <span class="section-label">Organization</span>
+            <h2 class="section-title">Driven by <span class="text-gradient-forest">dedicated people</span></h2>
+          </div>
+          <div class="leadership-grid">
+            <div class="leadership-member reveal-scale">
+              <div class="leadership-member-photo">
+                <img src="images/director_image.png?auto=compress&cs=tinysrgb&h=650&w=940" alt="Executive Director" loading="lazy" />
+                <div class="leadership-member-overlay"></div>
+              </div>
+              <div class="leadership-member-info">
+                <h3 class="leadership-name">Moral Noor Mohammad</h3>
+                <span class="leadership-role">Executive Director</span>
+                <p class="leadership-desc">Moral Noor Mohammad, born in 1951 in Bagerhat, Bangladesh, has dedicated his life to social development, environmental protection, and community empowerment. A freedom fighter of the 1971 Liberation War, he founded RUSTIC in 1988 and has since led initiatives in waste management, organic composting, climate resilience, sustainable livelihoods, and support for marginalized communities. His lifelong contributions have earned him national and international recognition, including the Ashoka Fellowship and Bangladesh’s Paribesh Padak.</p>
+                <div class="leadership-stats">
+                  <div class="leadership-stat"><div class="leadership-stat-label">Experience</div><div class="leadership-stat-value">leading since 1988</div></div>
+                  <div class="leadership-stat"><div class="leadership-stat-label"></div><div class="leadership-stat-value">Freedom fighter &amp; social worker</div></div>
+                </div>
+              </div>
+            </div>
+            <div class="leadership-member reveal reveal-delay-2">
+              <div class="leadership-member-photo">
+                <img src="images/president_image.png" alt="Programs Director" loading="lazy" />
+                <div class="leadership-member-overlay"></div>
+              </div>
+              <div class="leadership-member-info">
+                <h3 class="leadership-name">Monoaur Hossain</h3>
+                <span class="leadership-role">President</span>
+                <p class="leadership-desc">Moral Noor Mohammad, born in 1951 in Bagerhat, Bangladesh, has dedicated his life to social development, environmental protection, and community empowerment. A freedom fighter of the 1971 Liberation War, he founded RUSTIC in 1988 and has since led initiatives in waste management, organic composting, climate resilience, sustainable livelihoods, and support for marginalized communities. His lifelong contributions have earned him national and international recognition, including the Ashoka Fellowship and Bangladesh’s Paribesh Padak.</p>
+                <div class="leadership-stats">
+                  <div class="leadership-stat"><div class="leadership-stat-label">Experience</div><div class="leadership-stat-value">28+ years</div></div>
+                  <div class="leadership-stat"><div class="leadership-stat-label">Focus</div><div class="leadership-stat-value">Strategy & Growth</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PARTNERS -->
+      <section class="partners" id="partners">
+        <div class="partners-shimmer"></div>
+        <div class="container">
+          <div class="partners-header reveal reveal-delay-1">
+            <span class="section-label">Our Partners</span>
+            <h2 class="section-title">Working <span class="text-gradient-forest">together</span> for greater impact</h2>
+          </div>
+        </div>
+        <div class="partners-marquee-wrap">
+          <div class="partners-fade-left"></div>
+          <div class="partners-fade-right"></div>
+          <div class="partners-marquee" id="partnersMarquee"></div>
+        </div>
+        <div class="partners-line"></div>
+      </section>
+
+      <!-- GALLERY -->
+      <section class="gallery" id="gallery">
+        <div class="gallery-bg"></div>
+        <div class="gallery-sparkles" id="gallerySparkles"></div>
+        <div class="container">
+          <div class="gallery-header reveal reveal-delay-1">
+            <span class="section-label">Photo Gallery</span>
+            <h2 class="section-title">Moments of <span class="text-gradient-forest">impact & change</span></h2>
+            <p>Explore our work through photographs — from community gatherings and classroom moments to tree planting and climate resilience efforts across coastal Bangladesh.</p>
+          </div>
+          <div class="gallery-filters" id="galleryFilters"></div>
+          <div class="gallery-grid" id="galleryGrid"></div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta" id="cta">
+        <div class="cta-bg"></div>
+        <div class="cta-aurora"></div>
+        <div class="cta-blob b1"></div>
+        <div class="cta-blob b2"></div>
+        <div class="cta-blob b3"></div>
+        <div id="ctaParticles"></div>
+        <div class="cta-content">
+          <div class="cta-logo reveal-scale">
+            <div class="cta-logo-ring">
+              <svg viewBox="0 0 200 200" style="width:100%;height:100%;"><circle cx="100" cy="100" r="98" fill="none" stroke="#16A765" stroke-width="0.5" stroke-dasharray="4 8" opacity="0.3"/></svg>
+            </div>
+            <div class="cta-logo-center" id="ctaLogo"></div>
+          </div>
+          <h2 class="cta-title reveal reveal-delay-2">CHANGE BEGINS<br>WITH <span class="text-gradient-forest text-shadow-glow">ACTION.</span></h2>
+          <p class="cta-desc reveal reveal-delay-2">Building resilient communities and protecting the environment requires collective effort. Join us in creating lasting change across coastal Bangladesh.</p>
+          <div class="cta-buttons reveal reveal-delay-3">
+            <a class="btn btn-primary cta-btn-primary" onclick="scrollToId('#contact')">
+              Get Involved
+              <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a class="btn btn-secondary cta-btn-secondary" onclick="scrollToId('#contact')">
+              Partner With Us
+              <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contact">
+      <div class="footer-bg"></div>
+      <div class="footer-inner">
+        <div class="footer-grid">
+          <div style="grid-column:span 2;">
+            <div class="footer-brand">
+              <div class="rustic-logo no-anim" style="width:48px;height:48px;" id="footerLogo"></div>
+              <span class="footer-brand-text">RUSTIC</span>
+            </div>
+            <p class="footer-desc">RUSTIC works toward social, economic, and environmental development in Bangladesh — empowering communities to build resilience against poverty and the escalating impacts of climate change.</p>
+            <div class="footer-contact">
+              <div class="footer-contact-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3DBC7E" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Khulna, Bangladesh
+              </div>
+              <div class="footer-contact-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3DBC7E" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                info@rustic.org.bd
+              </div>
+              <div class="footer-contact-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3DBC7E" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                +880 41 2812345
+              </div>
+            </div>
+          </div>
+          <div>
+            <h4 class="footer-col-title">Navigation</h4>
+            <ul class="footer-list" id="footerNav"></ul>
+          </div>
+          <div>
+            <h4 class="footer-col-title">Programs</h4>
+            <ul class="footer-list" id="footerPrograms"></ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 RUSTIC Khulna. All rights reserved.</p>
+          <p>Building resilient communities across coastal Bangladesh.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/script.js"></script>
+  </body>
+</html>
