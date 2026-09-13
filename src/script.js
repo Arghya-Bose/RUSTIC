@@ -492,11 +492,6 @@ const galleryPhotos = [
 
 const galleryCategories = [
   { id: "all", label: "All Photos" },
-  { id: "community", label: "Community" },
-  { id: "education", label: "Education" },
-  { id: "waste", label: "Waste & Resource" },
-  { id: "forestry", label: "Forestry & Agriculture" },
-  { id: "climate", label: "Climate" },
 ];
 
 // ---------- SVG Icon Paths ----------
